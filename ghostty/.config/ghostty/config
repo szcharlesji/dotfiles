@@ -1,0 +1,57 @@
+# Font configuration
+# font-family = "Hack Nerd Font Mono"
+font-family = "TX-02"
+font-size = 16
+theme = TokyoNight Moon
+
+# command = /opt/homebrew/bin/fish -c "tmux new -A -s default"
+# command = /opt/homebrew/bin/fish
+
+# Window configuration
+window-decoration = auto
+window-padding-x = 4
+window-padding-y = 0
+# background-opacity = 0.98
+# Cursor configuration
+cursor-style = block
+cursor-style-blink = false
+
+# You can also change cursor style in different modes if using vi mode in your shell
+# These are optional settings
+shell-integration = zsh
+# shell-integration-features = cursor
+shell-integration-features = no-cursor,title
+
+# custom-shader = ./cursor_smear.glsl
+# custom-shader = ./cursor_blaze.glsl
+# custom-shader = ./cursor_synesthaxia.glsl
+# custom-shader = ./test.glsl
+
+# Unbind both Unicode codepoint and physical key bindings for tab switching
+# keybind = super+digit_1=unbind
+# keybind = super+digit_2=unbind
+# keybind = super+digit_3=unbind
+# keybind = super+digit_4=unbind
+# keybind = super+digit_5=unbind
+# keybind = super+digit_6=unbind
+# keybind = super+digit_7=unbind
+# keybind = super+digit_8=unbind
+# keybind = super+digit_9=unbind
+
+# Then bind to your tmux session switching
+# keybind = super+0=text:\x02s0
+# keybind = super+1=text:\x02s1
+# keybind = super+2=text:\x02s2
+# keybind = super+3=text:\x02s3
+# keybind = super+4=text:\x02s4
+# keybind = super+5=text:\x02s5
+# keybind = super+6=text:\x02s6
+# keybind = super+7=text:\x02s7
+# keybind = super+8=text:\x02s8
+# keybind = super+9=text:\x02s9
+
+# Go to "default"
+# keybind = super+e=text:\x02\x1b\x30
+
+# New window
+# keybind = super+t=text:\x01\x63
