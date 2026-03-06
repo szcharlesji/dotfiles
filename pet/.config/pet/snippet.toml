@@ -1,0 +1,11 @@
+[[Snippets]]
+Description = "Update All Brew Formulae and Casks"
+Output = ""
+Tag = []
+command = "brew update && brew upgrade --greedy && brew cleanup"
+
+[[Snippets]]
+Description = "Find session to switch in tmux"
+Output = ""
+Tag = []
+command = "tmux list-sessions -F#S | sort | fzf | xargs -r tmux switch -t"

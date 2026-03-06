@@ -1,0 +1,10 @@
+[General]
+editor = "nvim"
+selectcmd = "fzf"
+snippetfile = "/Users/chengji/.config/pet/snippet.toml"
+
+[Gist]
+auto_sync = true
+file_name = "pet-snippet.toml"
+gist_id = "4ebca5c3e506cc2e02532077b25e3e6c"
+public = false
