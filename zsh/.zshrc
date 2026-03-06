@@ -1,7 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-# Set theme (or set to "random" for random theme)
 ZSH_THEME="robbyrussell"
 
 # Plugins for comprehensive completions
@@ -32,8 +30,6 @@ plugins=(
 # Load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
-# ===== YOUR CUSTOM CONFIGURATION =====
-
 # Zoxide
 eval "$(zoxide init zsh)"
 
@@ -42,9 +38,6 @@ source <(fzf --zsh)
 
 # Aliases
 alias n='nvim'
-
-# Custom prompt (if you want to override OMZ theme, uncomment below)
-# PS1='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
 
 # Yazi function
 function y() {
@@ -55,5 +48,9 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# ===== END CUSTOM CONFIGURATION =====
+# Source secrets (not managed by stow)
+if [ -f "$HOME/.secrets/.env" ]; then
+  source "$HOME/.secrets/.env"
+fi
+
 export PATH="$(brew --prefix ruby)/bin:$PATH"
