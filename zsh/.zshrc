@@ -58,3 +58,7 @@ if [ -f "$HOME/.zsh_pet" ]; then
 fi
 
 export PATH="$(brew --prefix ruby)/bin:$PATH"
+export PATH="/Users/chengji/.bun/bin:$PATH"
+
+# bun completions
+[ -s "/Users/chengji/.bun/_bun" ] && source "/Users/chengji/.bun/_bun"
