@@ -4,3 +4,6 @@ nmap <CR> <Action>(EditorSelectWord)
 nmap <BS> <Action>(EditorUnSelectWord)
 vmap <CR> <Action>(EditorSelectWord)
 vmap <BS> <Action>(EditorUnSelectWord)
+
+sethandler <S-CR> n:vim
+nmap <S-CR> <Action>(NotebookRunCellSelectBelowAction)
