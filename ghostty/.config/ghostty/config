@@ -11,10 +11,12 @@ theme = TokyoNight Moon
 window-decoration = auto
 window-padding-x = 4
 window-padding-y = 0
-# background-opacity = 0.98
+background-opacity = 0.90
+background-blur = true
 # Cursor configuration
 cursor-style = block
 cursor-style-blink = false
+
 
 # You can also change cursor style in different modes if using vi mode in your shell
 # These are optional settings
