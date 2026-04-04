@@ -1,7 +1,7 @@
 [General]
 editor = "nvim"
 selectcmd = "fzf"
-snippetfile = "/Users/chengji/.config/pet/snippet.toml"
+snippetfile = "$HOME/.config/pet/snippet.toml"
 
 [Gist]
 auto_sync = true
