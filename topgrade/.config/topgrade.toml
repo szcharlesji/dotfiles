@@ -1,6 +1,29 @@
 [misc]
-# Disable steps that don't apply or aren't wanted
-disable = ["containers", "git_repos"]
+# Keep only: brew, bun, cargo, oh-my-zsh, tmux, uv, claude code.
+# oh-my-zsh has no CLI step flag, so we denylist everything else instead of
+# using `only` (which would filter oh-my-zsh out).
+disable = [
+    "containers",
+    "cursor",
+    "gem",
+    "git_repos",
+    "github_cli_extensions",
+    "jetbrains_clion",
+    "jetbrains_goland",
+    "jetbrains_idea",
+    "jetbrains_pycharm",
+    "jetbrains_rustrover",
+    "jetbrains_webstorm",
+    "microsoft_office",
+    "node",
+    "ruby_gems",
+    "skills",
+    "system",
+    "tlmgr",
+    "vim",
+    "vscode",
+    "yazi",
+]
 
 # Cleanup old/temporary files after upgrade
 cleanup = true
@@ -10,4 +33,3 @@ cleanup = true
 greedy_cask = true
 # Remove unused formulae after upgrade
 autoremove = true
-
