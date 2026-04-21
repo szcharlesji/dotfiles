@@ -2,9 +2,9 @@
 # font-family = "Hack Nerd Font Mono"
 font-family = "TX-02"
 font-size = 16
-theme = TokyoNight Moon
+theme = Catppuccin Mocha
 
-# command = /opt/homebrew/bin/fish -c "tmux new -A -s default"
+command = zsh -c "tmux new -A -s default"
 # command = /opt/homebrew/bin/fish
 
 # Window configuration
