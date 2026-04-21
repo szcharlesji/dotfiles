@@ -60,6 +60,10 @@ fi
 export PATH="$(brew --prefix ruby)/bin:$PATH"
 export PATH="$HOME/.bun/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# Added by Antigravity
+export PATH="/Users/chengji/.antigravity/antigravity/bin:$PATH"
