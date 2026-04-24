@@ -4,7 +4,7 @@ font-family = "TX-02"
 font-size = 16
 theme = Catppuccin Mocha
 
-command = zsh -c "tmux new -A -s default"
+# command = zsh -c "tmux new -A -s default"
 # command = /opt/homebrew/bin/fish
 
 # Window configuration
@@ -14,12 +14,10 @@ window-padding-y = 0
 background-opacity = 0.90
 background-blur = true
 # Cursor configuration
+#
 cursor-style = block
 cursor-style-blink = false
 
-
-# You can also change cursor style in different modes if using vi mode in your shell
-# These are optional settings
 shell-integration = zsh
 # shell-integration-features = cursor
 shell-integration-features = no-cursor,title
@@ -57,3 +55,10 @@ shell-integration-features = no-cursor,title
 
 # New window
 # keybind = super+t=text:\x01\x63
+
+keybind = cmd+\=new_split:right
+keybind = cmd+-=new_split:down
+keybind = cmd+h=goto_split:left
+keybind = cmd+j=goto_split:bottom
+keybind = cmd+k=goto_split:top
+keybind = cmd+l=goto_split:right
