@@ -36,8 +36,3 @@ end
 
 # opencode
 fish_add_path /Users/chengji/.opencode/bin
-
-function tailscale
-    /Applications/Tailscale.app/Contents/MacOS/Tailscale $argv
-end
-funcsave tailscale
