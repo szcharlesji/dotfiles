@@ -18,7 +18,7 @@ background-blur = true
 cursor-style = block
 cursor-style-blink = false
 
-shell-integration = zsh
+shell-integration = detect
 # shell-integration-features = cursor
 shell-integration-features = no-cursor,title
 
