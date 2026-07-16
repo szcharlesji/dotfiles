@@ -33,8 +33,3 @@ if status is-interactive
         source "$HOME/.config/fish/pet.fish"
     end
 end
-
-# opencode
-fish_add_path /Users/chengji/.opencode/bin
-
-set -x SSH_AUTH_SOCK $HOME/.bitwarden-ssh-agent.sock
