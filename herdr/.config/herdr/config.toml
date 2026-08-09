@@ -14,3 +14,7 @@ auto_switch = false
 [keys]
 previous_workspace = "prefix+up"
 next_workspace = "prefix+down"
+
+[experimental]
+# Requires a Kitty graphics-compatible outer terminal (Ghostty/kitty, not Alacritty).
+kitty_graphics = true

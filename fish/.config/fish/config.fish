@@ -14,6 +14,10 @@ fish_add_path $HOME/.cargo/bin
 
 set -g fish_greeting
 
+if set -q HERDR_PANE_ID
+    set -gx SNACKS_WEZTERM 1
+end
+
 if status is-interactive
     # Zoxide
     if type -q zoxide
