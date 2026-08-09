@@ -7,6 +7,7 @@ delivery = "herdr"
 show_agent_labels_on_pane_borders = true
 
 agent_panel_sort = "spaces"
+
 [theme]
 name = "terminal"
 auto_switch = true
@@ -14,6 +15,28 @@ auto_switch = true
 [keys]
 previous_workspace = "prefix+up"
 next_workspace = "prefix+down"
+# moved off prefix+e, which now opens the file viewer
+edit_scrollback = "prefix+shift+e"
+
+[[keys.command]]
+key = "prefix+e"
+type = "plugin_action"
+command = "herdr-file-viewer.open-file-viewer"
+description = "open file viewer in split"
+
+[[keys.command]]
+key = "prefix+u"
+type = "plugin_action"
+command = "usagebar.open-limits"
+description = "Agent Usage: open limits pane"
+
+[[keys.command]]
+key = "prefix+g"
+type = "popup"
+command = "lazygit"
+description = "Lazygit in a floating popup"
+width = "80%"
+height = "80%"
 
 [experimental]
 # Requires a Kitty graphics-compatible outer terminal (Ghostty/kitty, not Alacritty).
