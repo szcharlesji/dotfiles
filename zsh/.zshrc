@@ -52,10 +52,6 @@ function y() {
 if [ -f "$HOME/.secrets/.env" ]; then
   source "$HOME/.secrets/.env"
 fi
-# Pet config
-if [ -f "$HOME/.zsh_pet" ]; then
-  source "$HOME/.zsh_pet"
-fi
 
 export PATH="$(brew --prefix ruby)/bin:$PATH"
 export PATH="$HOME/.bun/bin:$PATH"
