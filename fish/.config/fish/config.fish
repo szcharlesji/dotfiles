@@ -61,6 +61,10 @@ fish_add_path $HOME/.cargo/bin
 
 set -g fish_greeting
 
+if set -q HERDR_PANE_ID
+    set -gx SNACKS_WEZTERM 1
+end
+
 if status is-interactive
     # Zoxide
     if type -q zoxide
@@ -80,8 +84,3 @@ if status is-interactive
         source "$HOME/.config/fish/pet.fish"
     end
 end
-
-# opencode
-fish_add_path /Users/chengji/.opencode/bin
-
-set -x SSH_AUTH_SOCK $HOME/.bitwarden-ssh-agent.sock

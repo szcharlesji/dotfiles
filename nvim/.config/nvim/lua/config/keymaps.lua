@@ -41,3 +41,7 @@
 -- Treesitter
 -- vim.keymap.del("v", "S")
 -- vim.keymap.set("v", "S", "<Plug>(nvim-surround-visual)", { desc = "Surround selection" })
+
+if vim.g.vscode then
+  require("config.vscode")
+end
