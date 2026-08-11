@@ -10,7 +10,7 @@ agent_panel_sort = "spaces"
 
 [theme]
 name = "terminal"
-auto_switch = true
+auto_switch = false
 
 [keys]
 previous_workspace = "prefix+up"
@@ -31,7 +31,13 @@ command = "usagebar.open-limits"
 description = "Agent Usage: open limits pane"
 
 [[keys.command]]
-key = "prefix+g"
+key = "prefix+shift+b"
+type = "shell"
+command = '"${HERDR_BIN_PATH}" plugin pane open --plugin official.browser --entrypoint browser --placement overlay --focus'
+description = "open browser overlay"
+
+[[keys.command]]
+key = "prefix+i"
 type = "popup"
 command = "lazygit"
 description = "Lazygit in a floating popup"
