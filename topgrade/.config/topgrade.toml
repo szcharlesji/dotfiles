@@ -3,26 +3,15 @@
 # oh-my-zsh has no CLI step flag, so we denylist everything else instead of
 # using `only` (which would filter oh-my-zsh out).
 disable = [
-    "containers",
-    "cursor",
-    "gem",
-    "git_repos",
-    "github_cli_extensions",
-    "jetbrains_clion",
-    "jetbrains_goland",
-    "jetbrains_idea",
-    "jetbrains_pycharm",
-    "jetbrains_rustrover",
-    "jetbrains_webstorm",
-    "microsoft_office",
-    "node",
-    "ruby_gems",
-    "skills",
-    "system",
-    "tlmgr",
-    "vim",
-    "vscode",
-    "yazi",
+  "containers",
+  "gem",
+  "git_repos",
+  "node",
+  "ruby_gems",
+  "system",
+  "tlmgr",
+  "jetbrains_pycharm",
+
 ]
 
 # Cleanup old/temporary files after upgrade

@@ -1,3 +1,50 @@
+
+# NYU HPC modules + conda for fish, lazy-loaded for fast startup
+function __nyu_lmod_init
+    if not functions -q __nyu_lmod_real_module
+        if test -f /share/apps/lmod/init/fish
+            functions -e module
+            source /share/apps/lmod/init/fish
+            if functions -q module
+                functions -c module __nyu_lmod_real_module
+            end
+        end
+    end
+end
+
+function module
+    __nyu_lmod_init
+    if functions -q __nyu_lmod_real_module
+        __nyu_lmod_real_module $argv
+    else
+        echo "module: Lmod init not found" >&2
+        return 127
+    end
+end
+
+function __nyu_conda_init
+    __nyu_lmod_init
+    if functions -q __nyu_lmod_real_module
+        __nyu_lmod_real_module load anaconda3/2025.06
+    else
+        return 127
+    end
+
+    if test -x /share/apps/anaconda3/2025.06/bin/conda
+        /share/apps/anaconda3/2025.06/bin/conda shell.fish hook | source
+        return 0
+    end
+
+    echo "conda: /share/apps/anaconda3/2025.06/bin/conda not found" >&2
+    return 127
+end
+
+function conda
+    functions -e conda
+    __nyu_conda_init; or return $status
+    conda $argv
+end
+
 # PATH (universal — safe outside interactive)
 if test -x /opt/homebrew/bin/brew
     /opt/homebrew/bin/brew shellenv | source
@@ -13,6 +60,10 @@ fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.cargo/bin
 
 set -g fish_greeting
+
+if set -q HERDR_PANE_ID
+    set -gx SNACKS_WEZTERM 1
+end
 
 if status is-interactive
     # Zoxide
@@ -33,8 +84,3 @@ if status is-interactive
         source "$HOME/.config/fish/pet.fish"
     end
 end
-
-# opencode
-fish_add_path /Users/chengji/.opencode/bin
-
-set -x SSH_AUTH_SOCK $HOME/.bitwarden-ssh-agent.sock
