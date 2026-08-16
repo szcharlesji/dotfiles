@@ -84,3 +84,7 @@ if status is-interactive
         source "$HOME/.config/fish/pet.fish"
     end
 end
+
+if status is-interactive
+    atuin init fish | source
+end

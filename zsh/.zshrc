@@ -63,3 +63,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Added by Antigravity
 export PATH="/Users/chengji/.antigravity/antigravity/bin:$PATH"
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
