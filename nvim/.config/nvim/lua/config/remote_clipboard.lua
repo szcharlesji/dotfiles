@@ -41,6 +41,10 @@ local function ancestor_process_named(name)
 end
 
 function M.setup()
+  if vim.fn.has("mac") == 1 then
+    return
+  end
+
   local in_tmux = vim.env.TMUX ~= nil
   local in_ssh = vim.env.SSH_TTY ~= nil or vim.env.SSH_CONNECTION ~= nil
   local in_herdr = vim.env.HERDR_PANE_ID ~= nil or ancestor_process_named("herdr")

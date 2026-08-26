@@ -1,4 +1,3 @@
-
 # NYU HPC modules + conda for fish, lazy-loaded for fast startup
 function __nyu_lmod_init
     if not functions -q __nyu_lmod_real_module
@@ -78,11 +77,6 @@ if status is-interactive
 
     # Aliases
     alias n nvim
-
-    # Pet config (if a fish version exists)
-    if test -f "$HOME/.config/fish/pet.fish"
-        source "$HOME/.config/fish/pet.fish"
-    end
 end
 
 if status is-interactive

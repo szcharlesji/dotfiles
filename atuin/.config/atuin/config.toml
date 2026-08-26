@@ -75,11 +75,11 @@
 
 ## which display style to use
 ## possible values: auto, full, compact
-# style = "compact"
+style = "compact"
 
 ## the maximum number of lines the interface should take up
 ## set it to 0 to always go full screen
-# inline_height = 40
+inline_height = 20
 
 ## the maximum number of lines the interface should take up
 ## when atuin is invoked from a shell up-key binding
@@ -365,6 +365,7 @@ autostart = true
 
 [ai]
 enabled = true
+model = "fast"
 ## Columns to display in the interactive search, from left to right.
 ## The selection indicator (" > ") is always shown first implicitly.
 ##

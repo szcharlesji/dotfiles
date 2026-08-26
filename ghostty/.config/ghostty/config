@@ -2,7 +2,7 @@
 # font-family = "Hack Nerd Font Mono"
 font-family = "TX-02"
 font-size = 16
-theme = Catppuccin Macchiato
+theme = light:Catppuccin Latte,dark:Catppuccin Macchiato
 
 # command = zsh -c "tmux new -A -s default"
 # command = /opt/homebrew/bin/fish
